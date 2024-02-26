@@ -21,6 +21,14 @@ async function createToken() {
         supply: 100_000_000_000
     };
 
+    /**
+     * Note about supply
+     * 
+     * The supply number is plain and human-readable but that would result in total token supply of
+     * 0.000_000_1 SHARK. To avoid this, we should format the number with ethers.utils 
+     */
+
+
     /** Get the contract */
     const Factory = await hre.ethers.getContractFactory("FactoryCloneTesting");
     const factory = Factory.attach(factoryAddress);

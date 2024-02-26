@@ -9,4 +9,3 @@ Todos:
   - [ ] - openTrading / LP creation
   - [ ] - whiteList
 - [ ] - create excalidraw mocks that can further be used for whitepaper 
-
