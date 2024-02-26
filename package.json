@@ -1,0 +1,32 @@
+{
+  "name": "poc-erc1167",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "madjarx",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.0",
+    "@openzeppelin/contracts-upgradeable": "^3.4.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "hardhat": "^2.0.10",
+    "hardhat-gas-reporter": "^1.0.4"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "fork": "npx hardhat node",
+    "deploy:implementation:sepolia": "npx hardhat run scripts/sepolia/01_deploy_implementation.js --network sepolia",
+    "deploy:implementation:localhost": "npx hardhat run scripts/localhost/01_deploy_implementation.js --network localhost",
+    "deploy:factory:sepolia": "npx hardhat run scripts/sepolia/02_deploy_factory.js --network sepolia",
+    "deploy:factory:localhost": "npx hardhat run scripts/localhost/02_deploy_factory.js --network localhost",
+    "create:token:sepolia": "npx hardhat run scripts/sepolia/03_create_token.js --network sepolia",
+    "create:token:localhost": "npx hardhat run scripts/localhost/03_create_token.js --network localhost",
+    "test:token:sepolia" : "npx hardhat run scripts/sepolia/04_read_contract.js --network sepolia",
+    "test:token:localhost" : "npx hardhat run scripts/localhost/04_read_contract.js --network localhost"
+  }
+}
